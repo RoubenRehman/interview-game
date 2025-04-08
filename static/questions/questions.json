@@ -4,7 +4,7 @@
     "de": "Deutsch"
   },
   "timerConfig": {
-    "duration": 10,
+    "duration": 600,
     "defaultLanguage": "en",
     "showTimer": true
   },
