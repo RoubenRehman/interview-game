@@ -8,7 +8,7 @@
     import { theme } from '$lib/stores/theme';
 
     let currentQuestion = '';
-    let currentLanguage: 'en' | 'de' = 'en';
+    let currentLanguage = '';
     let isTransitioning = false;
     let currentCategory = 1;
 

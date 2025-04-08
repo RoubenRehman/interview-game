@@ -4,22 +4,23 @@ import type { Writable } from 'svelte/store';
 interface Question {
     id: string;
     category: number;
-    translations: {
-        en: string;
-        de: string;
-    };
+    translations: Record<string, string>;
 }
 
 interface Category {
-    en: string;
-    de: string;
+    [key: string]: string;
+}
+
+interface Languages {
+    [key: string]: string;
 }
 
 interface QuestionStore {
     currentIndex: number;
     questions: Question[];
     categories: Record<string, Category>;
-    language: 'en' | 'de';
+    languages: Languages;
+    language: string;
     isTransitioning: boolean;
 }
 
@@ -28,6 +29,7 @@ export const questionStore: Writable<QuestionStore> = writable({
     currentIndex: 0,
     questions: [],
     categories: {},
+    languages: {},
     language: 'en',
     isTransitioning: false
 });
@@ -38,10 +40,16 @@ export async function loadQuestions() {
         const response = await fetch('/questions/questions.json');
         const data = await response.json();
         
+        // Set default language to first available language if current one isn't available
+        const availableLanguages = Object.keys(data.languages);
+        let defaultLanguage = availableLanguages[0];
+        
         questionStore.update(store => ({
             ...store,
             questions: data.questions,
-            categories: data.categories
+            categories: data.categories,
+            languages: data.languages,
+            language: availableLanguages.includes(store.language) ? store.language : defaultLanguage
         }));
     } catch (error) {
         console.error('Error loading questions:', error);
@@ -73,18 +81,33 @@ export async function nextQuestion() {
 }
 
 // Function to change language
-export function setLanguage(lang: 'en' | 'de') {
-    questionStore.update(store => ({
-        ...store,
-        language: lang
-    }));
+export function setLanguage(lang: string) {
+    questionStore.update(store => {
+        // Only update if language exists
+        if (store.languages[lang]) {
+            return {
+                ...store,
+                language: lang
+            };
+        }
+        return store;
+    });
 }
 
 // Function to get category name in current language
-export function getCategoryName(categoryId: number, language: 'en' | 'de'): string {
+export function getCategoryName(categoryId: number, language: string): string {
     let store: QuestionStore | undefined;
     questionStore.subscribe(s => { store = s; })();
     
     if (!store) return '';
     return store.categories[categoryId]?.[language] || '';
+}
+
+// Function to get available languages
+export function getAvailableLanguages(): [string, string][] {
+    let store: QuestionStore | undefined;
+    questionStore.subscribe(s => { store = s; })();
+    
+    if (!store) return [];
+    return Object.entries(store.languages);
 }

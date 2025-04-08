@@ -1,16 +1,14 @@
 <script lang="ts">
-    import { setLanguage } from '$lib/stores/questions';
+    import { setLanguage, getAvailableLanguages, questionStore } from '$lib/stores/questions';
     import { theme } from '$lib/stores/theme';
     
     let isOpen = false;
     let dropdownRef: HTMLDivElement;
+    let languages: [string, string][] = [];
 
-    type Language = 'en' | 'de';
-
-    const languages: Array<{ code: Language; name: string }> = [
-        { code: 'en', name: 'English' },
-        { code: 'de', name: 'Deutsch' }
-    ];
+    questionStore.subscribe(store => {
+        languages = Object.entries(store.languages);
+    });
 
     function toggleDropdown() {
         isOpen = !isOpen;
@@ -22,7 +20,7 @@
         }
     }
 
-    function selectLanguage(code: Language) {
+    function selectLanguage(code: string) {
         setLanguage(code);
         isOpen = false;
     }
@@ -45,13 +43,13 @@
     </button>
     {#if isOpen}
         <div class="dropdown" style:background={$theme.colors.card} style:color={$theme.colors.text}>
-            {#each languages as lang}
+            {#each languages as [code, name]}
                 <button 
                     class="dropdown-item"
-                    on:click={() => selectLanguage(lang.code)}
+                    on:click={() => selectLanguage(code)}
                     style:color={$theme.colors.text}
                 >
-                    {lang.name}
+                    {name}
                 </button>
             {/each}
         </div>
