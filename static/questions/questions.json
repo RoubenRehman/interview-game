@@ -402,6 +402,318 @@
         "en": "What's a personal or professional milestone you can't wait to hit in the near future?",
         "de": "Was ist ein persönlicher oder beruflicher Meilenstein, den du in naher Zukunft kaum erwarten kannst?"
       }
+    },
+    {
+      "id": "q146",
+      "category": 2,
+      "translations": {
+        "en": "What's a turning point in your life that shaped who you are today?",
+        "de": "Was war ein Wendepunkt in deinem Leben, der dich zu dem gemacht hat, der du heute bist?"
+      }
+    },
+    {
+      "id": "q147",
+      "category": 2,
+      "translations": {
+        "en": "What's something you thought you wanted to do but ended up realizing wasn't the right fit for you?",
+        "de": "Was hast du gedacht zu wollen, aber dann festgestellt, dass es nicht zu dir passt?"
+      }
+    },
+    {
+      "id": "q148",
+      "category": 2,
+      "translations": {
+        "en": "What's one personal challenge you've overcome that's taught you an important lesson?",
+        "de": "Welche persönliche Herausforderung hast du überwunden, die dir eine wichtige Lektion beigebracht hat?"
+      }
+    },
+    {
+      "id": "q149",
+      "category": 2,
+      "translations": {
+        "en": "If you could go back and give your younger self one piece of advice, what would it be?",
+        "de": "Wenn du zu deinem jüngeren Ich zurückgehen und ihm einen Rat geben könntest, welcher wäre das?"
+      }
+    },
+    {
+      "id": "q150",
+      "category": 2,
+      "translations": {
+        "en": "What's the hardest thing you've had to let go of in your life, and how did you manage it?",
+        "de": "Was war das Schwierigste, was du in deinem Leben loslassen musstest, und wie hast du es geschafft?"
+      }
+    },
+    {
+      "id": "q151",
+      "category": 2,
+      "translations": {
+        "en": "Can you think of a moment in your life when you felt completely out of your depth, and how did you handle it?",
+        "de": "Kannst du dich an einen Moment in deinem Leben erinnern, als du dich völlig überfordert fühltest, und wie bist du damit umgegangen?"
+      }
+    },
+    {
+      "id": "q152",
+      "category": 2,
+      "translations": {
+        "en": "What's the most difficult decision you've had to make so far, and what did you learn from it?",
+        "de": "Was war die schwierigste Entscheidung, die du bisher treffen musstest, und was hast du daraus gelernt?"
+      }
+    },
+    {
+      "id": "q153",
+      "category": 2,
+      "translations": {
+        "en": "What's a \"failure\" that turned out to be a blessing in disguise?",
+        "de": "Was war ein \"Fehlschlag\", der sich als Segen in Verkleidung herausstellte?"
+      }
+    },
+    {
+      "id": "q154",
+      "category": 2,
+      "translations": {
+        "en": "What's something you did that felt like a risk, but turned out to be a huge learning experience?",
+        "de": "Was hast du getan, das sich wie ein Risiko anfühlte, aber sich als riesige Lernerfahrung herausstellte?"
+      }
+    },
+    {
+      "id": "q155",
+      "category": 2,
+      "translations": {
+        "en": "Is there a time when you surprised yourself with what you were capable of? Tell me about it.",
+        "de": "Gab es eine Zeit, in der du dich selbst mit dem überrascht hast, was du fähig warst zu tun? Erzähl mir davon."
+      }
+    },
+    {
+      "id": "q156",
+      "category": 2,
+      "translations": {
+        "en": "What's a past mistake that ended up teaching you something valuable that you still apply today?",
+        "de": "Was war ein Fehler in der Vergangenheit, der dir etwas Wertvolles beigebracht hat, das du heute noch anwendest?"
+      }
+    },
+    {
+      "id": "q157",
+      "category": 2,
+      "translations": {
+        "en": "How do you navigate situations when you feel unmotivated or stuck?",
+        "de": "Wie gehst du mit Situationen um, in denen du unmotiviert oder festgefahren bist?"
+      }
+    },
+    {
+      "id": "q158",
+      "category": 2,
+      "translations": {
+        "en": "What's a value or principle you've held onto throughout your life, and why is it important to you?",
+        "de": "Was ist ein Wert oder Grundsatz, an dem du dein Leben lang festgehalten hast, und warum ist er dir wichtig?"
+      }
+    },
+    {
+      "id": "q159",
+      "category": 2,
+      "translations": {
+        "en": "What's the most empowering piece of advice you've ever received, and how has it shaped you?",
+        "de": "Was ist der ermächtigendste Rat, den du je erhalten hast, und wie hat er dich geprägt?"
+      }
+    },
+    {
+      "id": "q160",
+      "category": 2,
+      "translations": {
+        "en": "How do you react when things don't go as planned, and how do you bounce back?",
+        "de": "Wie reagierst du, wenn Dinge nicht nach Plan laufen, und wie findest du wieder in die Spur?"
+      }
+    },
+    {
+      "id": "q161",
+      "category": 2,
+      "translations": {
+        "en": "What's one skill or talent you have that you're not actively using but wish you could?",
+        "de": "Was ist eine Fähigkeit oder ein Talent, das du nicht aktiv nutzt, aber gerne nutzen würdest?"
+      }
+    },
+    {
+      "id": "q162",
+      "category": 2,
+      "translations": {
+        "en": "What's an experience that challenged your beliefs or worldview in a significant way?",
+        "de": "Was war eine Erfahrung, die deine Überzeugungen oder Weltanschauung auf bedeutsame Weise herausgefordert hat?"
+      }
+    },
+    {
+      "id": "q163",
+      "category": 2,
+      "translations": {
+        "en": "What's one piece of wisdom you've gained from someone you admire or respect?",
+        "de": "Was ist eine Weisheit, die du von jemandem gelernt hast, den du bewunderst oder respektierst?"
+      }
+    },
+    {
+      "id": "q164",
+      "category": 2,
+      "translations": {
+        "en": "What's a moment when you felt truly confident, and how did that change you?",
+        "de": "Was war ein Moment, in dem du dich wirklich selbstbewusst gefühlt hast, und wie hat das dich verändert?"
+      }
+    },
+    {
+      "id": "q165",
+      "category": 2,
+      "translations": {
+        "en": "When you look at your achievements, which one stands out the most to you?",
+        "de": "Wenn du auf deine Errungenschaften blickst, welche sticht am meisten hervor?"
+      }
+    },
+    {
+      "id": "q166",
+      "category": 1,
+      "translations": {
+        "en": "If you had to describe yourself using a metaphor, what would it be?",
+        "de": "Wenn du dich mit einer Metapher beschreiben müsstest, welche wäre das?"
+      }
+    },
+    {
+      "id": "q167",
+      "category": 1,
+      "translations": {
+        "en": "If your life were a movie, what would its title be?",
+        "de": "Wenn dein Leben ein Film wäre, wie würde der Titel lauten?"
+      }
+    },
+    {
+      "id": "q168",
+      "category": 1,
+      "translations": {
+        "en": "What's a decision you made recently that turned out to be more impactful than you expected?",
+        "de": "Welche Entscheidung, die du kürzlich getroffen hast, war unerwartet einflussreicher als gedacht?"
+      }
+    },
+    {
+      "id": "q169",
+      "category": 1,
+      "translations": {
+        "en": "What's the most surprising thing you've learned about yourself in the last year?",
+        "de": "Was ist das Überraschendste, das du im letzten Jahr über dich selbst gelernt hast?"
+      }
+    },
+    {
+      "id": "q170",
+      "category": 1,
+      "translations": {
+        "en": "What's the best compliment you've ever received, and why did it stand out to you?",
+        "de": "Was ist das beste Kompliment, das du je erhalten hast, und warum ist es dir aufgefallen?"
+      }
+    },
+    {
+      "id": "q171",
+      "category": 1,
+      "translations": {
+        "en": "If someone could write a book about you, what would the title be and why?",
+        "de": "Wenn jemand ein Buch über dich schreiben könnte, wie würde der Titel lauten und warum?"
+      }
+    },
+    {
+      "id": "q172",
+      "category": 1,
+      "translations": {
+        "en": "If you could see one part of your future with perfect clarity, what would it be?",
+        "de": "Wenn du einen Teil deiner Zukunft mit perfekter Klarheit sehen könntest, welcher wäre das?"
+      }
+    },
+    {
+      "id": "q173",
+      "category": 1,
+      "translations": {
+        "en": "What's a habit or routine you've built that has positively impacted your life?",
+        "de": "Welche Gewohnheit oder Routine hast du aufgebaut, die dein Leben positiv beeinflusst hat?"
+      }
+    },
+    {
+      "id": "q174",
+      "category": 1,
+      "translations": {
+        "en": "If you could challenge yourself to try something completely outside your comfort zone, what would it be?",
+        "de": "Wenn du dich herausfordern könntest, etwas völlig außerhalb deiner Komfortzone zu tun, was wäre das?"
+      }
+    },
+    {
+      "id": "q175",
+      "category": 1,
+      "translations": {
+        "en": "What's the first thing you think of when you wake up in the morning?",
+        "de": "Was ist das Erste, woran du denkst, wenn du morgens aufwachst?"
+      }
+    },
+    {
+      "id": "q176",
+      "category": 1,
+      "translations": {
+        "en": "If you could live a day in the shoes of anyone you admire, who would it be, and what would you do?",
+        "de": "Wenn du einen Tag in den Schuhen von jemandem leben könntest, den du bewunderst, wer wäre es und was würdest du tun?"
+      }
+    },
+    {
+      "id": "q177",
+      "category": 1,
+      "translations": {
+        "en": "What's a non-academic skill you've learned that you're proud of?",
+        "de": "Welche nicht-akademische Fähigkeit hast du gelernt, auf die du stolz bist?"
+      }
+    },
+    {
+      "id": "q178",
+      "category": 1,
+      "translations": {
+        "en": "How do you define personal growth, and what does it look like to you?",
+        "de": "Wie definierst du persönliche Entwicklung und wie sieht sie für dich aus?"
+      }
+    },
+    {
+      "id": "q179",
+      "category": 1,
+      "translations": {
+        "en": "What's a life lesson you've learned that you don't think is taught enough in school?",
+        "de": "Welche Lebenslektion hast du gelernt, die deiner Meinung nach in der Schule nicht genug beigebracht wird?"
+      }
+    },
+    {
+      "id": "q180",
+      "category": 1,
+      "translations": {
+        "en": "If you could live anywhere in the world for a year, where would you choose and why?",
+        "de": "Wenn du ein Jahr lang irgendwo auf der Welt leben könntest, wo würdest du wählen und warum?"
+      }
+    },
+    {
+      "id": "q181",
+      "category": 1,
+      "translations": {
+        "en": "What does your ideal workday look like?",
+        "de": "Wie sieht dein idealer Arbeitstag aus?"
+      }
+    },
+    {
+      "id": "q182",
+      "category": 1,
+      "translations": {
+        "en": "If you had to describe your approach to life in a few words, what would they be?",
+        "de": "Wie würdest du deinen Lebensansatz in ein paar Worten beschreiben?"
+      }
+    },
+    {
+      "id": "q183",
+      "category": 1,
+      "translations": {
+        "en": "What's one thing you've changed your mind about recently?",
+        "de": "Was ist eine Sache, bei der du kürzlich deine Meinung geändert hast?"
+      }
+    },
+    {
+      "id": "q184",
+      "category": 1,
+      "translations": {
+        "en": "When do you feel most \"yourself\"?",
+        "de": "Wann fühlst du dich am meisten 'du selbst'?"
+      }
     }
   ]
 }
