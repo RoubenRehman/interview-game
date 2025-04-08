@@ -15,11 +15,22 @@ interface Languages {
     [key: string]: string;
 }
 
+interface TimeUpMessage {
+    title: string;
+    description: string;
+    button: string;
+}
+
+interface TimeUpMessages {
+    [key: string]: TimeUpMessage;
+}
+
 interface QuestionStore {
     currentIndex: number;
     questions: Question[];
     categories: Record<string, Category>;
     languages: Languages;
+    timeUpMessages?: TimeUpMessages;
     language: string;
     isTransitioning: boolean;
 }
@@ -49,6 +60,7 @@ export async function loadQuestions() {
             questions: data.questions,
             categories: data.categories,
             languages: data.languages,
+            timeUpMessages: data.timeUpMessages,
             language: availableLanguages.includes(store.language) ? store.language : defaultLanguage
         }));
     } catch (error) {

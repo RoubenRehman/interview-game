@@ -3,6 +3,18 @@
     "en": "English",
     "de": "Deutsch"
   },
+  "timeUpMessages": {
+    "en": {
+      "title": "Time's Up!",
+      "description": "Don't worry, take your time to reflect on the question.",
+      "button": "Continue"
+    },
+    "de": {
+      "title": "Zeit abgelaufen!",
+      "description": "Keine Sorge, nimm dir Zeit zum Nachdenken.",
+      "button": "Weiter"
+    }
+  },
   "categories": {
     "1": {
       "en": "Ice Breaker",

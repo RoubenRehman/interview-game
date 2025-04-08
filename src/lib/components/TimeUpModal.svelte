@@ -7,21 +7,11 @@
     export let onContinue: () => void;
 
     $: language = $questionStore.language;
-
-    const messages = {
-        en: {
-            title: "Time's Up!",
-            description: "Don't worry, take your time to reflect on the question.",
-            button: "Continue"
-        },
-        de: {
-            title: "Zeit abgelaufen!",
-            description: "Keine Sorge, nimm dir Zeit zum Nachdenken.",
-            button: "Weiter"
-        }
+    $: timeUpMessage = $questionStore.timeUpMessages?.[language] || {
+        title: "Time's Up!",
+        description: "What do you think?",
+        button: "Continue"
     };
-
-    $: currentMessage = messages[language as keyof typeof messages] || messages.en;
 
     function handleKeyDown(event: KeyboardEvent) {
         if (event.key === 'Escape') {
@@ -50,14 +40,14 @@
             id="time-up-title" 
             style:color={$theme.colors.primary}
         >
-            {currentMessage.title}
+            {timeUpMessage.title}
         </h2>
-        <p>{currentMessage.description}</p>
+        <p>{timeUpMessage.description}</p>
         <button 
             on:click={onContinue}
             style:background={$theme.colors.primary}
         >
-            {currentMessage.button}
+            {timeUpMessage.button}
         </button>
     </div>
 </div>
