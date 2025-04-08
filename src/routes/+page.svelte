@@ -53,9 +53,10 @@
     });
 
     function handleContinue() {
-        // Reset timer and continue
-        timerStore.reset();
+        // Continue without fully resetting the timer
+        timerStore.pause();
         nextQuestion();
+        timerStore.resume();
     }
 </script>
 
