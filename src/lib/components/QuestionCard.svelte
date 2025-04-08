@@ -49,6 +49,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        perspective: 1000px;
     }
 
     .card {
@@ -57,6 +58,9 @@
         height: 300px;
         text-align: center;
         position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        backdrop-filter: blur(10px);
     }
 
     .category-label {
@@ -65,9 +69,13 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: 0.875rem;
-        font-weight: 500;
-        letter-spacing: 0.05em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
     }
 
     .question-container {
@@ -94,6 +102,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .next-button {
@@ -107,14 +116,19 @@
         font-size: 1rem;
         cursor: pointer;
         min-width: 150px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
     }
 
     .next-button:disabled {
         cursor: not-allowed;
+        opacity: 0.7;
     }
 
     .next-button:not(:disabled):hover {
-        background: var(--primary-hover) !important;
+        transform: translateX(-50%) translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .next-button:focus {

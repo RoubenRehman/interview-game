@@ -40,22 +40,18 @@
     <ThemeToggle />
     <div class="language-selector">
         <button 
-            class:active={currentLanguage === 'en'} 
+            class:active={currentLanguage === 'en'}
             on:click={() => setLanguage('en')}
-            style:border-color={$theme.colors.primary}
-            style:color={currentLanguage === 'en' ? $theme.colors.textLight : $theme.colors.primary}
             style:background={currentLanguage === 'en' ? $theme.colors.primary : 'transparent'}
-            style:border-radius={$theme.borderRadius.button}
+            style:color={currentLanguage === 'en' ? 'white' : $theme.colors.text}
         >
             English
         </button>
         <button 
-            class:active={currentLanguage === 'de'} 
+            class:active={currentLanguage === 'de'}
             on:click={() => setLanguage('de')}
-            style:border-color={$theme.colors.primary}
-            style:color={currentLanguage === 'de' ? $theme.colors.textLight : $theme.colors.primary}
             style:background={currentLanguage === 'de' ? $theme.colors.primary : 'transparent'}
-            style:border-radius={$theme.borderRadius.button}
+            style:color={currentLanguage === 'de' ? 'white' : $theme.colors.text}
         >
             Deutsch
         </button>

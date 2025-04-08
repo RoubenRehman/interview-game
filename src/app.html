@@ -6,14 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<style>
 			:root {
-				--primary: #4299e1;
-				--primary-hover: #3182ce;
-				--button-focus-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+				--primary: #FF6B6B;
+				--primary-hover: #FF8E53;
+				--button-focus-shadow: 0 0 0 3px rgba(255, 107, 107, 0.5);
+			}
+
+			body {
+				margin: 0;
+				min-height: 100vh;
+				transition: background 0.3s ease;
 			}
 
 			/* Smooth transitions for theme changes */
 			* {
-				transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+				transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 			}
 
 			/* Disable transitions for elements that shouldn't animate */
@@ -30,6 +36,11 @@
 			/* Ensure content is visible when not switching */
 			:not(.theme-switching) {
 				opacity: 1;
+			}
+
+			/* Button hover effect */
+			button:not(:disabled):hover {
+				filter: brightness(1.1);
 			}
 		</style>
 		%sveltekit.head%
