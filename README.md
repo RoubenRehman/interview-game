@@ -42,5 +42,8 @@ An interactive web application designed to facilitate meaningful conversations a
 - Adjust timer settings in the same configuration file
 - Extend language support by adding new translations
 
+## License 📄
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Contributing 🤝
 Contributions are welcome! Please feel free to submit a Pull Request.
