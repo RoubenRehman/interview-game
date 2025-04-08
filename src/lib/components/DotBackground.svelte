@@ -29,14 +29,14 @@
         height: 100%;
         background-image: radial-gradient(circle at center, currentColor 1px, transparent 1px);
         background-size: 30px 30px;
-        opacity: 0.1;
+        opacity: 0.2;
     }
 
     :global([data-theme="dark"]) .dot-grid {
-        color: white;
+        color: rgba(255, 255, 255, 0.7);
     }
 
     :global([data-theme="light"]) .dot-grid {
-        color: black;
+        color: rgba(0, 0, 0, 0.3);
     }
 </style>
