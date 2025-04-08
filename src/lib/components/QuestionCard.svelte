@@ -3,13 +3,20 @@
     export let language: 'en' | 'de' = 'en';
     export let onNext: () => void;
     export let isTransitioning: boolean;
+    export let category: number;
 
     import { fade } from 'svelte/transition';
     import { theme } from '$lib/stores/theme';
+    import { getCategoryName } from '$lib/stores/questions';
+
+    $: categoryName = getCategoryName(category, language);
 </script>
 
 <div class="card-container">
     <div class="card" style:background={$theme.colors.card} style:box-shadow={$theme.shadows.card} style:border-radius={$theme.borderRadius.card}>
+        <div class="category-label" style:color={$theme.colors.primary}>
+            {categoryName}
+        </div>
         <div class="question-container">
             {#if !isTransitioning}
                 <p 
@@ -52,9 +59,20 @@
         position: relative;
     }
 
+    .category-label {
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
     .question-container {
         position: absolute;
-        top: 2rem;
+        top: 3.5rem;
         left: 2rem;
         right: 2rem;
         bottom: 6rem;

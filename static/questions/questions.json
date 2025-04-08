@@ -3,9 +3,32 @@
     "en": "English",
     "de": "Deutsch"
   },
+  "categories": {
+    "1": {
+      "en": "Ice Breaker",
+      "de": "Eisbrecher"
+    },
+    "2": {
+      "en": "Personal Growth",
+      "de": "Persönliche Entwicklung"
+    },
+    "3": {
+      "en": "Imagination",
+      "de": "Fantasie"
+    },
+    "4": {
+      "en": "Reflection",
+      "de": "Reflexion"
+    },
+    "5": {
+      "en": "Philosophy",
+      "de": "Philosophie"
+    }
+  },
   "questions": [
     {
       "id": "q1",
+      "category": 5,
       "translations": {
         "en": "If you could have dinner with any historical figure, who would it be and why?",
         "de": "Wenn Sie mit einer historischen Persönlichkeit zu Abend essen könnten, wer wäre es und warum?"
@@ -13,6 +36,7 @@
     },
     {
       "id": "q2",
+      "category": 1,
       "translations": {
         "en": "What's the most unusual talent you have?",
         "de": "Was ist dein ungewöhnlichstes Talent?"
@@ -20,6 +44,7 @@
     },
     {
       "id": "q3",
+      "category": 2,
       "translations": {
         "en": "If you could instantly master any skill, what would it be?",
         "de": "Wenn du sofort eine Fähigkeit meistern könntest, welche wäre es?"
@@ -27,6 +52,7 @@
     },
     {
       "id": "q4",
+      "category": 4,
       "translations": {
         "en": "What's the best piece of advice you've ever received?",
         "de": "Was ist der beste Ratschlag, den du je bekommen hast?"
@@ -34,6 +60,7 @@
     },
     {
       "id": "q5",
+      "category": 3,
       "translations": {
         "en": "If you could live in any fictional world, which would you choose?",
         "de": "Wenn du in einer fiktiven Welt leben könntest, welche würdest du wählen?"

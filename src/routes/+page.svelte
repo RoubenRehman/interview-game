@@ -8,13 +8,16 @@
     let currentQuestion = '';
     let currentLanguage: 'en' | 'de' = 'en';
     let isTransitioning = false;
+    let currentCategory = 1;
 
     // Subscribe to the store
     questionStore.subscribe(store => {
         if (store.questions.length > 0) {
-            currentQuestion = store.questions[store.currentIndex].translations[store.language];
+            const currentQuestionObj = store.questions[store.currentIndex];
+            currentQuestion = currentQuestionObj.translations[store.language];
             currentLanguage = store.language;
             isTransitioning = store.isTransitioning;
+            currentCategory = currentQuestionObj.category;
         }
     });
 
@@ -65,6 +68,7 @@
                 language={currentLanguage}
                 onNext={nextQuestion}
                 isTransitioning={isTransitioning}
+                category={currentCategory}
             />
         {/if}
     </div>

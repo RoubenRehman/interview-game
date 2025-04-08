@@ -3,15 +3,22 @@ import type { Writable } from 'svelte/store';
 
 interface Question {
     id: string;
+    category: number;
     translations: {
         en: string;
         de: string;
     };
 }
 
+interface Category {
+    en: string;
+    de: string;
+}
+
 interface QuestionStore {
     currentIndex: number;
     questions: Question[];
+    categories: Record<string, Category>;
     language: 'en' | 'de';
     isTransitioning: boolean;
 }
@@ -20,6 +27,7 @@ interface QuestionStore {
 export const questionStore: Writable<QuestionStore> = writable({
     currentIndex: 0,
     questions: [],
+    categories: {},
     language: 'en',
     isTransitioning: false
 });
@@ -32,7 +40,8 @@ export async function loadQuestions() {
         
         questionStore.update(store => ({
             ...store,
-            questions: data.questions
+            questions: data.questions,
+            categories: data.categories
         }));
     } catch (error) {
         console.error('Error loading questions:', error);
@@ -69,4 +78,13 @@ export function setLanguage(lang: 'en' | 'de') {
         ...store,
         language: lang
     }));
+}
+
+// Function to get category name in current language
+export function getCategoryName(categoryId: number, language: 'en' | 'de'): string {
+    let store: QuestionStore | undefined;
+    questionStore.subscribe(s => { store = s; })();
+    
+    if (!store) return '';
+    return store.categories[categoryId]?.[language] || '';
 }
