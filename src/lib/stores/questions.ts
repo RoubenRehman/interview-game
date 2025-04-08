@@ -28,6 +28,7 @@ interface TimeUpMessages {
 interface TimerConfig {
     duration: number;
     defaultLanguage: string;
+    showTimer: boolean;
 }
 
 interface QuestionStore {
@@ -39,6 +40,7 @@ interface QuestionStore {
     timerConfig?: TimerConfig;
     language: string;
     isTransitioning: boolean;
+    showTimer: boolean;
 }
 
 // Create the store with initial values
@@ -48,7 +50,8 @@ export const questionStore: Writable<QuestionStore> = writable({
     categories: {},
     languages: {},
     language: 'en',
-    isTransitioning: false
+    isTransitioning: false,
+    showTimer: false
 });
 
 // Function to load questions from our JSON file
@@ -68,7 +71,8 @@ export async function loadQuestions() {
             languages: data.languages,
             timeUpMessages: data.timeUpMessages,
             timerConfig: data.timerConfig,
-            language: availableLanguages.includes(store.language) ? store.language : defaultLanguage
+            language: availableLanguages.includes(store.language) ? store.language : defaultLanguage,
+            showTimer: data.timerConfig?.showTimer ?? false
         }));
     } catch (error) {
         console.error('Error loading questions:', error);

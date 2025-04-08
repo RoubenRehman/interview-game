@@ -69,7 +69,7 @@
             <ThemeToggle />
         </div>
         
-        {#if $timerStore.isActive || $timerStore.isExpired}
+        {#if $questionStore.showTimer && ($timerStore.isActive || $timerStore.isExpired)}
             <div 
                 class="timer" 
                 style:color={$theme.colors.text}

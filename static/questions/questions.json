@@ -5,7 +5,8 @@
   },
   "timerConfig": {
     "duration": 10,
-    "defaultLanguage": "en"
+    "defaultLanguage": "en",
+    "showTimer": true
   },
   "timeUpMessages": {
     "en": {
