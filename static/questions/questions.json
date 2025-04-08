@@ -44,406 +44,6 @@
   },
   "questions": [
     {
-      "id": "q1",
-      "category": 1,
-      "translations": {
-        "en": "If you had to describe yourself using a metaphor, what would it be?",
-        "de": "Wenn du dich mit einer Metapher beschreiben müsstest, welche wäre das?"
-      }
-    },
-    {
-      "id": "q2",
-      "category": 1,
-      "translations": {
-        "en": "If your life were a movie, what would its title be?",
-        "de": "Wenn dein Leben ein Film wäre, wie würde der Titel lauten?"
-      }
-    },
-    {
-      "id": "q3",
-      "category": 1,
-      "translations": {
-        "en": "What’s a decision you made recently that turned out to be more impactful than you expected?",
-        "de": "Welche Entscheidung, die du kürzlich getroffen hast, war unerwartet einflussreicher als gedacht?"
-      }
-    },
-    {
-      "id": "q4",
-      "category": 1,
-      "translations": {
-        "en": "What’s the most surprising thing you’ve learned about yourself in the last year?",
-        "de": "Was ist das Überraschendste, das du im letzten Jahr über dich selbst gelernt hast?"
-      }
-    },
-    {
-      "id": "q5",
-      "category": 1,
-      "translations": {
-        "en": "What’s the best compliment you've ever received, and why did it stand out to you?",
-        "de": "Was ist das beste Kompliment, das du je erhalten hast, und warum ist es dir aufgefallen?"
-      }
-    },
-    {
-      "id": "q6",
-      "category": 1,
-      "translations": {
-        "en": "If someone could write a book about you, what would the title be and why?",
-        "de": "Wenn jemand ein Buch über dich schreiben könnte, wie würde der Titel lauten und warum?"
-      }
-    },
-    {
-      "id": "q7",
-      "category": 1,
-      "translations": {
-        "en": "If you could see one part of your future with perfect clarity, what would it be?",
-        "de": "Wenn du einen Teil deiner Zukunft mit perfekter Klarheit sehen könntest, welcher wäre das?"
-      }
-    },
-    {
-      "id": "q8",
-      "category": 1,
-      "translations": {
-        "en": "What’s a habit or routine you’ve built that has positively impacted your life?",
-        "de": "Welche Gewohnheit oder Routine hast du aufgebaut, die dein Leben positiv beeinflusst hat?"
-      }
-    },
-    {
-      "id": "q9",
-      "category": 1,
-      "translations": {
-        "en": "If you could challenge yourself to try something completely outside your comfort zone, what would it be?",
-        "de": "Wenn du dich herausfordern könntest, etwas völlig außerhalb deiner Komfortzone zu tun, was wäre das?"
-      }
-    },
-    {
-      "id": "q10",
-      "category": 1,
-      "translations": {
-        "en": "What’s the first thing you think of when you wake up in the morning?",
-        "de": "Was ist das Erste, woran du denkst, wenn du morgens aufwachst?"
-      }
-    },
-    {
-      "id": "q11",
-      "category": 1,
-      "translations": {
-        "en": "If you could live a day in the shoes of anyone you admire, who would it be, and what would you do?",
-        "de": "Wenn du einen Tag in den Schuhen von jemandem leben könntest, den du bewunderst, wer wäre es und was würdest du tun?"
-      }
-    },
-    {
-      "id": "q12",
-      "category": 1,
-      "translations": {
-        "en": "What’s a non-academic skill you’ve learned that you’re proud of?",
-        "de": "Welche nicht-akademische Fähigkeit hast du gelernt, auf die du stolz bist?"
-      }
-    },
-    {
-      "id": "q13",
-      "category": 1,
-      "translations": {
-        "en": "How do you define personal growth, and what does it look like to you?",
-        "de": "Wie definierst du persönliche Entwicklung und wie sieht sie für dich aus?"
-      }
-    },
-    {
-      "id": "q14",
-      "category": 1,
-      "translations": {
-        "en": "What’s a life lesson you’ve learned that you don’t think is taught enough in school?",
-        "de": "Welche Lebenslektion hast du gelernt, die deiner Meinung nach in der Schule nicht genug beigebracht wird?"
-      }
-    },
-    {
-      "id": "q15",
-      "category": 1,
-      "translations": {
-        "en": "If you could live anywhere in the world for a year, where would you choose and why?",
-        "de": "Wenn du ein Jahr lang irgendwo auf der Welt leben könntest, wo würdest du wählen und warum?"
-      }
-    },
-    {
-      "id": "q16",
-      "category": 1,
-      "translations": {
-        "en": "What does your ideal workday look like?",
-        "de": "Wie sieht dein idealer Arbeitstag aus?"
-      }
-    },
-    {
-      "id": "q17",
-      "category": 1,
-      "translations": {
-        "en": "If you had to describe your approach to life in a few words, what would they be?",
-        "de": "Wie würdest du deinen Lebensansatz in ein paar Worten beschreiben?"
-      }
-    },
-    {
-      "id": "q18",
-      "category": 1,
-      "translations": {
-        "en": "What’s one thing you’ve changed your mind about recently?",
-        "de": "Was ist eine Sache, bei der du kürzlich deine Meinung geändert hast?"
-      }
-    },
-    {
-      "id": "q19",
-      "category": 1,
-      "translations": {
-        "en": "When do you feel most 'yourself'?",
-        "de": "Wann fühlst du dich am meisten 'du selbst'?"
-      }
-    },
-    {
-      "id": "q20",
-      "category": 1,
-      "translations": {
-        "en": "If you could instantly know how to do something amazing, what would you choose to master?",
-        "de": "Wenn du sofort wissen könntest, wie du etwas Erstaunliches machst, was würdest du meistern?"
-      }
-    },
-    {
-      "id": "q21",
-      "category": 2,
-      "translations": {
-        "en": "What’s a turning point in your life that shaped who you are today?",
-        "de": "Was war ein Wendepunkt in deinem Leben, der dich zu dem gemacht hat, der du heute bist?"
-      }
-    },
-    {
-      "id": "q22",
-      "category": 2,
-      "translations": {
-        "en": "What’s something you thought you wanted to do but ended up realizing wasn’t the right fit for you?",
-        "de": "Was hast du gedacht, dass du es tun möchtest, aber dann festgestellt, dass es nicht zu dir passt?"
-      }
-    },
-    {
-      "id": "q23",
-      "category": 2,
-      "translations": {
-        "en": "What’s one personal challenge you’ve overcome that’s taught you an important lesson?",
-        "de": "Welche persönliche Herausforderung hast du überwunden, die dir eine wichtige Lektion beigebracht hat?"
-      }
-    },
-    {
-      "id": "q24",
-      "category": 2,
-      "translations": {
-        "en": "If you could go back and give your younger self one piece of advice, what would it be?",
-        "de": "Wenn du zu deinem jüngeren Ich zurückgehen und ihm einen Rat geben könntest, welcher wäre das?"
-      }
-    },
-    {
-      "id": "q25",
-      "category": 2,
-      "translations": {
-        "en": "What’s the hardest thing you’ve had to let go of in your life, and how did you manage it?",
-        "de": "Was ist das Schwerste, was du in deinem Leben loslassen musstest, und wie hast du es geschafft?"
-      }
-    },
-    {
-      "id": "q26",
-      "category": 2,
-      "translations": {
-        "en": "Can you think of a moment in your life when you felt completely out of your depth, and how did you handle it?",
-        "de": "Kannst du dich an einen Moment in deinem Leben erinnern, als du dich völlig überfordert fühltest und wie du damit umgegangen bist?"
-      }
-    },
-    {
-      "id": "q27",
-      "category": 2,
-      "translations": {
-        "en": "What’s the most difficult decision you’ve had to make so far, and what did you learn from it?",
-        "de": "Was ist die schwierigste Entscheidung, die du bisher treffen musstest, und was hast du daraus gelernt?"
-      }
-    },
-    {
-      "id": "q28",
-      "category": 2,
-      "translations": {
-        "en": "What’s a “failure” that turned out to be a blessing in disguise?",
-        "de": "Was war ein „Fehlschlag“, der sich als Segen in Verkleidung herausstellte?"
-      }
-    },
-    {
-      "id": "q29",
-      "category": 2,
-      "translations": {
-        "en": "What’s something you did that felt like a risk, but turned out to be a huge learning experience?",
-        "de": "Was hast du getan, das sich wie ein Risiko anfühlte, aber sich als riesige Lernerfahrung herausstellte?"
-      }
-    },
-    {
-      "id": "q30",
-      "category": 2,
-      "translations": {
-        "en": "Is there a time when you surprised yourself with what you were capable of? Tell me about it.",
-        "de": "Gab es eine Zeit, in der du dich selbst mit dem überrascht hast, was du fähig warst zu tun? Erzähl mir davon."
-      }
-    },
-    {
-      "id": "q31",
-      "category": 3,
-      "translations": {
-        "en": "What’s something you’ve always wanted to do but haven’t had the chance to yet?",
-        "de": "Welches Projekt oder welche Idee möchtest du unbedingt starten, hattest aber noch nicht die Gelegenheit dazu?"
-      }
-    },
-    {
-      "id": "q32",
-      "category": 3,
-      "translations": {
-        "en": "What’s one thing you want to accomplish in the next five years, and why?",
-        "de": "Was ist eine Sache, die du in den nächsten fünf Jahren erreichen möchtest, und warum?"
-      }
-    },
-    {
-      "id": "q33",
-      "category": 3,
-      "translations": {
-        "en": "What’s a skill or talent you’ve always wanted to develop but haven’t yet had the time for?",
-        "de": "Was ist eine Fähigkeit oder ein Talent, das du schon immer entwickeln wolltest, aber noch nie die Zeit dafür hattest?"
-      }
-    },
-    {
-      "id": "q34",
-      "category": 3,
-      "translations": {
-        "en": "What would your ideal career look like in 10 years?",
-        "de": "Wie würde deine ideale Karriere in 10 Jahren aussehen?"
-      }
-    },
-    {
-      "id": "q35",
-      "category": 3,
-      "translations": {
-        "en": "What excites you most about your chosen field, and what drives you to pursue it?",
-        "de": "Was begeistert dich am meisten an deinem gewählten Bereich und was motiviert dich, ihn zu verfolgen?"
-      }
-    },
-    {
-      "id": "q36",
-      "category": 3,
-      "translations": {
-        "en": "What’s the biggest challenge you anticipate in reaching your goals, and how are you planning to overcome it?",
-        "de": "Was ist die größte Herausforderung, die du bei der Erreichung deiner Ziele erwartest, und wie planst du, sie zu überwinden?"
-      }
-    },
-    {
-      "id": "q37",
-      "category": 3,
-      "translations": {
-        "en": "If you could spend a day learning from someone in your field, who would it be and what would you want to learn?",
-        "de": "Wenn du einen Tag damit verbringen könntest, von jemandem in deinem Bereich zu lernen, wer wäre das und was würdest du gerne lernen?"
-      }
-    },
-    {
-      "id": "q38",
-      "category": 3,
-      "translations": {
-        "en": "What’s a problem you’re passionate about solving, and why is it important to you?",
-        "de": "Welches Problem möchtest du leidenschaftlich lösen und warum ist es dir wichtig?"
-      }
-    },
-    {
-      "id": "q39",
-      "category": 3,
-      "translations": {
-        "en": "What would make you feel proud of yourself in the next few years?",
-        "de": "Was würde dich in den nächsten Jahren stolz auf dich selbst machen?"
-      }
-    },
-    {
-      "id": "q40",
-      "category": 3,
-      "translations": {
-        "en": "If you could make one major impact in your career, what would that look like?",
-        "de": "Wenn du in deiner Karriere einen großen Einfluss haben könntest, wie würde das aussehen?"
-      }
-    },
-    {
-      "id": "q41",
-      "category": 4,
-      "translations": {
-        "en": "If you could swap lives with someone for a day, who would it be and why?",
-        "de": "Wenn du für einen Tag das Leben mit jemandem tauschen könntest, wer wäre das und warum?"
-      }
-    },
-    {
-      "id": "q42",
-      "category": 4,
-      "translations": {
-        "en": "What’s the funniest thing that’s ever happened to you during a Zoom call?",
-        "de": "Was ist das Lustigste, was dir je während eines Zoom-Anrufs passiert ist?"
-      }
-    },
-    {
-      "id": "q43",
-      "category": 4,
-      "translations": {
-        "en": "If you were a superhero, what would your superpower be?",
-        "de": "Wenn du ein Superheld wärst, welche Superkraft hättest du?"
-      }
-    },
-    {
-      "id": "q44",
-      "category": 4,
-      "translations": {
-        "en": "If you could instantly speak any language in the world, which one would you choose?",
-        "de": "Wenn du sofort jede Sprache der Welt sprechen könntest, welche würdest du wählen?"
-      }
-    },
-    {
-      "id": "q45",
-      "category": 4,
-      "translations": {
-        "en": "If you could have dinner with any fictional character, who would it be and why?",
-        "de": "Wenn du mit einer fiktiven Figur zu Abend essen könntest, wer wäre es und warum?"
-      }
-    },
-    {
-      "id": "q46",
-      "category": 4,
-      "translations": {
-        "en": "What’s the weirdest food you’ve ever tried and liked?",
-        "de": "Was ist das seltsamste Essen, das du je probiert und gemocht hast?"
-      }
-    },
-    {
-      "id": "q47",
-      "category": 4,
-      "translations": {
-        "en": "If you could have any animal, real or mythical, as a pet, which would you choose?",
-        "de": "Wenn du jedes Tier, real oder mythisch, als Haustier haben könntest, welches würdest du wählen?"
-      }
-    },
-    {
-      "id": "q48",
-      "category": 4,
-      "translations": {
-        "en": "What’s the most random fact you know?",
-        "de": "Was ist die zufälligste Tatsache, die du weißt?"
-      }
-    },
-    {
-      "id": "q49",
-      "category": 4,
-      "translations": {
-        "en": "If you could invent a holiday, what would it celebrate?",
-        "de": "Wenn du einen Feiertag erfinden könntest, was würde er feiern?"
-      }
-    },
-    {
-      "id": "q50",
-      "category": 4,
-      "translations": {
-        "en": "What’s the most unusual skill you have that could come in handy during a zombie apocalypse?",
-        "de": "Welche ungewöhnliche Fähigkeit hast du, die während einer Zombie-Apokalypse nützlich sein könnte?"
-      }
-    },
-    {
       "id": "q101",
       "category": 5,
       "translations": {
@@ -453,7 +53,7 @@
     },
     {
       "id": "q102",
-      "category": 1,
+      "category": 2,
       "translations": {
         "en": "What's the most unusual talent you have?",
         "de": "Was ist dein ungewöhnlichstes Talent?"
@@ -461,7 +61,7 @@
     },
     {
       "id": "q103",
-      "category": 2,
+      "category": 3,
       "translations": {
         "en": "If you could instantly master any skill, what would it be?",
         "de": "Wenn du sofort eine Fähigkeit meistern könntest, welche wäre es?"
@@ -469,7 +69,7 @@
     },
     {
       "id": "q104",
-      "category": 4,
+      "category": 2,
       "translations": {
         "en": "What's the best piece of advice you've ever received?",
         "de": "Was ist der beste Ratschlag, den du je bekommen hast?"
@@ -477,10 +77,170 @@
     },
     {
       "id": "q105",
-      "category": 3,
+      "category": 5,
       "translations": {
         "en": "If you could live in any fictional world, which would you choose?",
         "de": "Wenn du in einer fiktiven Welt leben könntest, welche würdest du wählen?"
+      }
+    },
+    {
+      "id": "q106",
+      "category": 5,
+      "translations": {
+        "en": "If you could instantly gain a new, surprising talent, what would you pick?",
+        "de": "Wenn du dir sofort ein überraschendes neues Talent wünschen könntest, welches wäre das?"
+      }
+    },
+    {
+      "id": "q107",
+      "category": 5,
+      "translations": {
+        "en": "What's the most interesting \"what if\" scenario you've ever imagined?",
+        "de": "Was ist das faszinierendste \"Was wäre, wenn\"-Szenario, das du dir je ausgemalt hast?"
+      }
+    },
+    {
+      "id": "q108",
+      "category": 5,
+      "translations": {
+        "en": "What would your ideal \"day off\" look like if you didn't have any responsibilities?",
+        "de": "Wie würde dein perfekter \"freier Tag\" aussehen, wenn du keinerlei Verpflichtungen hättest?"
+      }
+    },
+    {
+      "id": "q109",
+      "category": 5,
+      "translations": {
+        "en": "What's something about your field that blows your mind when you think about it?",
+        "de": "Was ist etwas in deinem Bereich, das dir den Verstand raubt, wenn du darüber nachdenkst?"
+      }
+    },
+    {
+      "id": "q110",
+      "category": 5,
+      "translations": {
+        "en": "If you could live in a fictional universe (book, movie, TV show), which would you choose and why?",
+        "de": "Wenn du in einem fiktiven Universum (Buch, Film, TV-Serie) leben könntest, welches würdest du wählen und warum?"
+      }
+    },
+    {
+      "id": "q111",
+      "category": 5,
+      "translations": {
+        "en": "If you were given the ability to speak any language instantly, which one would you choose first?",
+        "de": "Wenn du die Fähigkeit hättest, sofort eine Sprache zu sprechen, welche würdest du zuerst wählen?"
+      }
+    },
+    {
+      "id": "q112",
+      "category": 5,
+      "translations": {
+        "en": "What's the most obscure fact or piece of trivia you know?",
+        "de": "Was ist die obskurste Tatsache oder das skurrilste Wissenshäppchen, das du kennst?"
+      }
+    },
+    {
+      "id": "q113",
+      "category": 5,
+      "translations": {
+        "en": "What's a moment that completely changed your perspective on something important?",
+        "de": "Gab es einen Moment, der deine Sichtweise auf etwas Wichtiges komplett verändert hat?"
+      }
+    },
+    {
+      "id": "q114",
+      "category": 5,
+      "translations": {
+        "en": "If you could have a conversation with anyone, living or dead, who would it be, and what would you ask them?",
+        "de": "Wenn du mit jemandem sprechen könntest - egal ob lebendig oder tot - wer wäre es, und was würdest du fragen?"
+      }
+    },
+    {
+      "id": "q115",
+      "category": 5,
+      "translations": {
+        "en": "What's a hidden gem of a book, movie, or TV show that you think everyone should experience?",
+        "de": "Was ist ein verborgener Schatz eines Buches, Films oder einer TV-Serie, den jeder erleben sollte?"
+      }
+    },
+    {
+      "id": "q116",
+      "category": 5,
+      "translations": {
+        "en": "If you could trade places with someone for a day, who would it be and what would you do?",
+        "de": "Wenn du für einen Tag mit jemandem tauschen könntest, wer wäre es und was würdest du tun?"
+      }
+    },
+    {
+      "id": "q117",
+      "category": 5,
+      "translations": {
+        "en": "If you had the power to make one global change, what would you do?",
+        "de": "Wenn du die Macht hättest, eine globale Veränderung zu bewirken, was würdest du tun?"
+      }
+    },
+    {
+      "id": "q118",
+      "category": 5,
+      "translations": {
+        "en": "What's the most daring thing you've ever done (big or small)?",
+        "de": "Was ist das mutigste, was du je getan hast - egal ob groß oder klein?"
+      }
+    },
+    {
+      "id": "q119",
+      "category": 5,
+      "translations": {
+        "en": "What's something you've done that was totally out of character for you, but you're glad you did?",
+        "de": "Was hast du getan, das total untypisch für dich war, aber worüber du trotzdem froh bist?"
+      }
+    },
+    {
+      "id": "q120",
+      "category": 5,
+      "translations": {
+        "en": "If you could be a fly on the wall in any room, where would you want to be?",
+        "de": "Wenn du eine Fliege an der Wand in einem beliebigen Raum wärst, wo würdest du sein wollen?"
+      }
+    },
+    {
+      "id": "q121",
+      "category": 5,
+      "translations": {
+        "en": "What's one question you'd love to know the answer to, but don't know how to find out?",
+        "de": "Was ist eine Frage, deren Antwort du unbedingt wissen möchtest, aber nicht herausfinden kannst?"
+      }
+    },
+    {
+      "id": "q122",
+      "category": 5,
+      "translations": {
+        "en": "What's the most ridiculous but fun goal you've ever set for yourself?",
+        "de": "Was ist das absurdeste, aber lustigste Ziel, das du dir je gesetzt hast?"
+      }
+    },
+    {
+      "id": "q123",
+      "category": 5,
+      "translations": {
+        "en": "What's the best spontaneous decision you've ever made?",
+        "de": "Was war die beste spontane Entscheidung, die du je getroffen hast?"
+      }
+    },
+    {
+      "id": "q124",
+      "category": 5,
+      "translations": {
+        "en": "If you could invent a new technology, what problem would it solve?",
+        "de": "Wenn du eine neue Technologie erfinden könntest, welches Problem würdest du lösen?"
+      }
+    },
+    {
+      "id": "q125",
+      "category": 5,
+      "translations": {
+        "en": "If you could design your ideal future city, what would be the top three things you'd include?",
+        "de": "Wenn du deine ideale Zukunftsstadt entwerfen könntest, was wären die drei wichtigsten Dinge, die du einbeziehen würdest?"
       }
     }
   ]
