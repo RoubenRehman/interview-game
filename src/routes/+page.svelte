@@ -6,6 +6,7 @@
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
     import LanguageToggle from '$lib/components/LanguageToggle.svelte';
     import DotBackground from '$lib/components/DotBackground.svelte';
+    import TimeUpModal from '$lib/components/TimeUpModal.svelte';
     import { theme } from '$lib/stores/theme';
 
     let currentQuestion = '';
@@ -44,11 +45,6 @@
         }
     });
 
-    function handleTimerExpired() {
-        // Stop the timer
-        timerStore.stop();
-    }
-
     function handleContinue() {
         // Reset timer and continue
         timerStore.reset();
@@ -85,13 +81,16 @@
                 <QuestionCard 
                     question={currentQuestion}
                     language={currentLanguage}
-                    onNext={$timerStore.isExpired ? handleContinue : nextQuestion}
+                    onNext={nextQuestion}
                     isTransitioning={isTransitioning}
                     category={currentCategory}
-                    timerExpired={$timerStore.isExpired}
                 />
             {/if}
         </div>
+
+        {#if $timerStore.isExpired}
+            <TimeUpModal onContinue={handleContinue} />
+        {/if}
     </main>
 </div>
 
