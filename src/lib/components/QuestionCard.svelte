@@ -8,6 +8,7 @@
     export let onNext: () => void;
     export let isTransitioning: boolean;
     export let category: number;
+    export let timerExpired: boolean = false;
 
     $: categoryName = getCategoryName(category, language);
 </script>
@@ -32,10 +33,18 @@
         disabled={isTransitioning}
         style:background={$theme.colors.primary}
     >
-        {#if language === 'en'}
-            Next Question
-        {:else if language === 'de'}
-            Nächste Frage
+        {#if timerExpired}
+            {#if language === 'en'}
+                Continue
+            {:else if language === 'de'}
+                Weiter
+            {/if}
+        {:else}
+            {#if language === 'en'}
+                Next Question
+            {:else if language === 'de'}
+                Nächste Frage
+            {/if}
         {/if}
     </button>
 </div>

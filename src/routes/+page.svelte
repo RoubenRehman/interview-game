@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
     import { questionStore, loadQuestions, nextQuestion } from '$lib/stores/questions';
+    import { timerStore } from '$lib/stores/timer';
     import QuestionCard from '$lib/components/QuestionCard.svelte';
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
     import LanguageToggle from '$lib/components/LanguageToggle.svelte';
@@ -11,6 +12,7 @@
     let currentLanguage = '';
     let isTransitioning = false;
     let currentCategory = 1;
+    let timerInterval: number;
 
     // Subscribe to the store
     questionStore.subscribe(store => {
@@ -25,7 +27,33 @@
 
     onMount(async () => {
         await loadQuestions();
+        
+        // Start timer when questions are loaded
+        timerStore.start();
+
+        // Set up timer interval
+        timerInterval = setInterval(() => {
+            timerStore.tick();
+        }, 1000);
     });
+
+    onDestroy(() => {
+        // Clear interval when component is destroyed
+        if (timerInterval) {
+            clearInterval(timerInterval);
+        }
+    });
+
+    function handleTimerExpired() {
+        // Stop the timer
+        timerStore.stop();
+    }
+
+    function handleContinue() {
+        // Reset timer and continue
+        timerStore.reset();
+        nextQuestion();
+    }
 </script>
 
 <div class="page">
@@ -37,14 +65,30 @@
         <div class="controls-right">
             <ThemeToggle />
         </div>
+        
+        {#if $timerStore.isActive || $timerStore.isExpired}
+            <div 
+                class="timer" 
+                style:color={$theme.colors.text}
+                style:opacity={$timerStore.isExpired ? 0.5 : 1}
+            >
+                {#if $timerStore.isExpired}
+                    Time's up!
+                {:else}
+                    {$timerStore.timeRemaining}s
+                {/if}
+            </div>
+        {/if}
+
         <div class="content">
             {#if currentQuestion}
                 <QuestionCard 
                     question={currentQuestion}
                     language={currentLanguage}
-                    onNext={nextQuestion}
+                    onNext={$timerStore.isExpired ? handleContinue : nextQuestion}
                     isTransitioning={isTransitioning}
                     category={currentCategory}
+                    timerExpired={$timerStore.isExpired}
                 />
             {/if}
         </div>
@@ -98,6 +142,17 @@
         z-index: 10;
     }
 
+    .timer {
+        position: fixed;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        font-size: 1.25rem;
+        font-weight: 500;
+        opacity: 0.7;
+    }
+
     .content {
         width: 100%;
         max-width: 600px;
@@ -119,6 +174,10 @@
         .controls-right {
             top: 0.5rem;
             right: 0.5rem;
+        }
+
+        .timer {
+            font-size: 1rem;
         }
     }
 </style>
