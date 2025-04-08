@@ -3,10 +3,14 @@
     "en": "English",
     "de": "Deutsch"
   },
+  "timerConfig": {
+    "duration": 10,
+    "defaultLanguage": "en"
+  },
   "timeUpMessages": {
     "en": {
       "title": "Time's Up!",
-      "description": "Don't worry, take your time to reflect on the question.",
+      "description": "What do you think?",
       "button": "Continue"
     },
     "de": {

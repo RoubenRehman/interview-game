@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { questionStore } from './questions';
 
 export interface TimerStore {
     isActive: boolean;
@@ -11,8 +12,18 @@ function createTimerStore() {
     const { subscribe, set, update } = writable<TimerStore>({
         isActive: false,
         timeRemaining: 0,
-        duration: 15, // default 15 seconds
+        duration: 600, // default 10 minutes
         isExpired: false
+    });
+
+    // Subscribe to question store to get timer configuration
+    questionStore.subscribe(store => {
+        const duration = store.timerConfig?.duration || 600;
+        update(timerStore => ({
+            ...timerStore,
+            duration,
+            timeRemaining: duration
+        }));
     });
 
     return {

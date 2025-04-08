@@ -25,12 +25,18 @@ interface TimeUpMessages {
     [key: string]: TimeUpMessage;
 }
 
+interface TimerConfig {
+    duration: number;
+    defaultLanguage: string;
+}
+
 interface QuestionStore {
     currentIndex: number;
     questions: Question[];
     categories: Record<string, Category>;
     languages: Languages;
     timeUpMessages?: TimeUpMessages;
+    timerConfig?: TimerConfig;
     language: string;
     isTransitioning: boolean;
 }
@@ -53,7 +59,7 @@ export async function loadQuestions() {
         
         // Set default language to first available language if current one isn't available
         const availableLanguages = Object.keys(data.languages);
-        let defaultLanguage = availableLanguages[0];
+        let defaultLanguage = data.timerConfig?.defaultLanguage || availableLanguages[0];
         
         questionStore.update(store => ({
             ...store,
@@ -61,6 +67,7 @@ export async function loadQuestions() {
             categories: data.categories,
             languages: data.languages,
             timeUpMessages: data.timeUpMessages,
+            timerConfig: data.timerConfig,
             language: availableLanguages.includes(store.language) ? store.language : defaultLanguage
         }));
     } catch (error) {

@@ -15,6 +15,13 @@
     let currentCategory = 1;
     let timerInterval: number;
 
+    // Format time to MM:SS
+    function formatTime(seconds: number): string {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+
     // Subscribe to the store
     questionStore.subscribe(store => {
         if (store.questions.length > 0) {
@@ -71,7 +78,7 @@
                 {#if $timerStore.isExpired}
                     Time's up!
                 {:else}
-                    {$timerStore.timeRemaining}s
+                    {formatTime($timerStore.timeRemaining)}
                 {/if}
             </div>
         {/if}
