@@ -59,7 +59,7 @@ export const questionStore: Writable<QuestionStore> = writable({
 // Function to load questions from our JSON file
 export async function loadQuestions() {
     try {
-        const response = await fetch('/questions/questions.json');
+        const response = await fetch('/interview-game/questions/questions.json');
         const data = await response.json();
         
         // Set default language to first available language if current one isn't available
