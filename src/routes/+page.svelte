@@ -5,12 +5,14 @@
 
     let currentQuestion = '';
     let currentLanguage: 'en' | 'de' = 'en';
+    let isTransitioning = false;
 
     // Subscribe to the store
     questionStore.subscribe(store => {
         if (store.questions.length > 0) {
             currentQuestion = store.questions[store.currentIndex].translations[store.language];
             currentLanguage = store.language;
+            isTransitioning = store.isTransitioning;
         }
     });
 
@@ -41,6 +43,7 @@
                 question={currentQuestion}
                 language={currentLanguage}
                 onNext={nextQuestion}
+                isTransitioning={isTransitioning}
             />
         {/if}
     </div>

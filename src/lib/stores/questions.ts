@@ -13,13 +13,15 @@ interface QuestionStore {
     currentIndex: number;
     questions: Question[];
     language: 'en' | 'de';
+    isTransitioning: boolean;
 }
 
 // Create the store with initial values
 export const questionStore: Writable<QuestionStore> = writable({
     currentIndex: 0,
     questions: [],
-    language: 'en'
+    language: 'en',
+    isTransitioning: false
 });
 
 // Function to load questions from our JSON file
@@ -37,11 +39,27 @@ export async function loadQuestions() {
     }
 }
 
-// Function to get next question
-export function nextQuestion() {
+// Function to get next question with fade transition
+export async function nextQuestion() {
     questionStore.update(store => ({
         ...store,
-        currentIndex: (store.currentIndex + 1) % store.questions.length
+        isTransitioning: true
+    }));
+
+    // Wait for fade out
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    questionStore.update(store => ({
+        ...store,
+        currentIndex: (store.currentIndex + 1) % store.questions.length,
+    }));
+
+    // Wait a bit before allowing next transition
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    questionStore.update(store => ({
+        ...store,
+        isTransitioning: false
     }));
 }
 

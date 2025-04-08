@@ -2,16 +2,25 @@
     export let question: string;
     export let language: 'en' | 'de' = 'en';
     export let onNext: () => void;
+    export let isTransitioning: boolean;
+
+    import { fade } from 'svelte/transition';
 </script>
 
 <div class="card-container">
     <div class="card">
-        <p class="question">
-            {question}
-        </p>
+        {#if !isTransitioning}
+            <p 
+                class="question"
+                transition:fade={{duration: 200}}
+            >
+                {question}
+            </p>
+        {/if}
         <button 
             class="next-button"
             on:click={onNext}
+            disabled={isTransitioning}
         >
             {language === 'en' ? 'Next Question' : 'Nächste Frage'}
         </button>
@@ -59,7 +68,12 @@
         cursor: pointer;
     }
 
-    .next-button:hover {
+    .next-button:disabled {
+        background: #a0aec0;
+        cursor: not-allowed;
+    }
+
+    .next-button:not(:disabled):hover {
         background: #3182ce;
     }
 
