@@ -24,7 +24,7 @@
     <div class="category" style:color={$theme.colors.primary}>
         {categoryName}
     </div>
-    <div class="question">
+    <div class="question text-center">
         {question}
     </div>
     <button 
@@ -82,6 +82,7 @@
         flex-grow: 1;
         display: flex;
         align-items: center;
+        text-align: center;
     }
 
     .next-button {
