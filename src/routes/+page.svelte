@@ -1,8 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import QuestionCard from '$lib/components/QuestionCard.svelte';
+    import ThemeToggle from '$lib/components/ThemeToggle.svelte';
     import { questionStore, loadQuestions, nextQuestion, setLanguage } from '$lib/stores/questions';
-    import { theme } from '$lib/stores/theme';
+    import { theme, isDarkMode } from '$lib/stores/theme';
 
     let currentQuestion = '';
     let currentLanguage: 'en' | 'de' = 'en';
@@ -17,12 +18,23 @@
         }
     });
 
+    // Check system preference for dark mode
     onMount(() => {
         loadQuestions();
+        
+        // Check system preference for dark mode
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        isDarkMode.set(prefersDark);
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            isDarkMode.set(e.matches);
+        });
     });
 </script>
 
-<main style:background={$theme.colors.background}>
+<main style:background={$theme.colors.background} style:color={$theme.colors.text}>
+    <ThemeToggle />
     <div class="language-selector">
         <button 
             class:active={currentLanguage === 'en'} 
@@ -87,6 +99,7 @@
         padding: 0.5rem 1rem;
         margin: 0 0.5rem;
         cursor: pointer;
+        transition: all 0.2s;
     }
 
     .language-selector button:hover {
