@@ -1,10 +1,10 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { questionStore, loadQuestions, nextQuestion, setLanguage } from '$lib/stores/questions';
     import QuestionCard from '$lib/components/QuestionCard.svelte';
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
     import DotBackground from '$lib/components/DotBackground.svelte';
-    import { questionStore, loadQuestions, nextQuestion, setLanguage } from '$lib/stores/questions';
-    import { theme, isDarkMode } from '$lib/stores/theme';
+    import { theme } from '$lib/stores/theme';
 
     let currentQuestion = '';
     let currentLanguage: 'en' | 'de' = 'en';
@@ -24,21 +24,12 @@
 
     onMount(async () => {
         await loadQuestions();
-        
-        // Check system preference for dark mode
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        isDarkMode.set(prefersDark);
-
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            isDarkMode.set(e.matches);
-        });
     });
 </script>
 
-<div class="app" style:color={$theme.colors.text}>
-    <div class="container" style:background={$theme.colors.background}>
-        <DotBackground />
+<div class="page">
+    <DotBackground />
+    <main>
         <ThemeToggle />
         <div class="language-selector">
             <button 
@@ -58,7 +49,7 @@
                 Deutsch
             </button>
         </div>
-        <div class="card-wrapper">
+        <div class="content">
             {#if currentQuestion}
                 <QuestionCard 
                     question={currentQuestion}
@@ -69,27 +60,40 @@
                 />
             {/if}
         </div>
-    </div>
+    </main>
 </div>
 
 <style>
-    .app {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        position: relative;
+    :global(html), :global(body) {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
     }
 
-    .container {
+    :global(#svelte) {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .page {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        background: var(--background-color);
+    }
+
+    main {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 2rem;
-        position: relative;
+        z-index: 1;
     }
 
     .language-selector {
@@ -115,7 +119,7 @@
         transform: translateY(-1px);
     }
 
-    .card-wrapper {
+    .content {
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
@@ -124,7 +128,7 @@
     }
 
     @media (max-width: 640px) {
-        .app {
+        main {
             padding: 1rem;
         }
     }

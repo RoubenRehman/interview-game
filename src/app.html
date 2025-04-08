@@ -3,47 +3,41 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width" />
+		%sveltekit.head%
 		<style>
 			:root {
-				--primary: #FF4757;
-				--primary-hover: #FF3347;
-				--button-focus-shadow: 0 0 0 3px rgba(255, 71, 87, 0.5);
+				--background-color: #f0f4f8;
+			}
+
+			[data-theme="dark"] {
+				--background-color: #1a1c2a;
+			}
+
+			html, body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				overflow-x: hidden;
+				position: relative;
 			}
 
 			body {
-				margin: 0;
+				background: var(--background-color);
 				min-height: 100vh;
-				transition: background-color 0.3s ease;
 			}
 
-			/* Smooth transitions for theme changes */
+			#svelte {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+
 			* {
-				transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-			}
-
-			/* Disable transitions for elements that shouldn't animate */
-			.no-transition {
-				transition: none !important;
-			}
-
-			/* Hide content during theme switch to prevent flash */
-			.theme-switching {
-				opacity: 0;
-				transition: opacity 0.3s ease;
-			}
-
-			/* Ensure content is visible when not switching */
-			:not(.theme-switching) {
-				opacity: 1;
-			}
-
-			/* Button hover effect */
-			button:not(:disabled):hover {
-				transform: translateY(-1px);
+				box-sizing: border-box;
 			}
 		</style>
-		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
