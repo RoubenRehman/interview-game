@@ -242,6 +242,166 @@
         "en": "If you could design your ideal future city, what would be the top three things you'd include?",
         "de": "Wenn du deine ideale Zukunftsstadt entwerfen könntest, was wären die drei wichtigsten Dinge, die du einbeziehen würdest?"
       }
+    },
+    {
+      "id": "q126",
+      "category": 3,
+      "translations": {
+        "en": "What's an idea or project you're itching to start but haven't yet? What's holding you back?",
+        "de": "Welche Idee oder welches Projekt brennt dir unter den Nägeln, das du noch nicht begonnen hast? Was hält dich zurück?"
+      }
+    },
+    {
+      "id": "q127",
+      "category": 3,
+      "translations": {
+        "en": "If money and time were no object, what would you choose to do with your life?",
+        "de": "Wenn Geld und Zeit keine Rolle spielen würden, was würdest du mit deinem Leben anfangen?"
+      }
+    },
+    {
+      "id": "q128",
+      "category": 3,
+      "translations": {
+        "en": "What would success look like to you in five years, and how do you plan to get there?",
+        "de": "Wie sieht Erfolg für dich in fünf Jahren aus, und wie willst du dorthin gelangen?"
+      }
+    },
+    {
+      "id": "q129",
+      "category": 3,
+      "translations": {
+        "en": "What's the one thing you want to achieve before you leave this world?",
+        "de": "Was ist die eine Sache, die du unbedingt erreichen möchtest, bevor du diese Welt verlässt?"
+      }
+    },
+    {
+      "id": "q130",
+      "category": 3,
+      "translations": {
+        "en": "If you could create a job that perfectly aligns with your passions, what would it look like?",
+        "de": "Wenn du dir einen Job ausdenken könntest, der perfekt mit deinen Leidenschaften übereinstimmt, wie würde er aussehen?"
+      }
+    },
+    {
+      "id": "q131",
+      "category": 3,
+      "translations": {
+        "en": "What's a goal you have that feels really big or intimidating, but you're still excited about it?",
+        "de": "Was ist ein Ziel, das sich riesig oder einschüchternd anfühlt, aber dich trotzdem begeistert?"
+      }
+    },
+    {
+      "id": "q132",
+      "category": 3,
+      "translations": {
+        "en": "If your life had a mission statement, what would it be?",
+        "de": "Wenn dein Leben eine Mission hätte, wie würde diese lauten?"
+      }
+    },
+    {
+      "id": "q133",
+      "category": 3,
+      "translations": {
+        "en": "What's one career path you'd like to explore that isn't directly related to your current field of study?",
+        "de": "Welchen Karriereweg würdest du gerne erkunden, der nicht direkt mit deinem aktuellen Studienbereich zusammenhängt?"
+      }
+    },
+    {
+      "id": "q134",
+      "category": 3,
+      "translations": {
+        "en": "If you could change one thing about the way the world works, what would it be?",
+        "de": "Wenn du eine Sache an der Art und Weise, wie die Welt funktioniert, ändern könntest, was wäre das?"
+      }
+    },
+    {
+      "id": "q135",
+      "category": 3,
+      "translations": {
+        "en": "What's an accomplishment from your future that you'd like to look back on and be proud of?",
+        "de": "Welche Leistung aus deiner Zukunft würdest du gerne zurückblicken und stolz darauf sein?"
+      }
+    },
+    {
+      "id": "q136",
+      "category": 3,
+      "translations": {
+        "en": "What's one risk you would be willing to take to follow your dreams?",
+        "de": "Welches Risiko wärst du bereit einzugehen, um deinen Träumen zu folgen?"
+      }
+    },
+    {
+      "id": "q137",
+      "category": 3,
+      "translations": {
+        "en": "What kind of legacy do you want to leave behind, and how do you plan to build it?",
+        "de": "Welches Erbe möchtest du hinterlassen, und wie planst du, es aufzubauen?"
+      }
+    },
+    {
+      "id": "q138",
+      "category": 3,
+      "translations": {
+        "en": "If you were to teach a course on something you're passionate about, what would it be?",
+        "de": "Wenn du einen Kurs über etwas unterrichten könntest, wofür du Leidenschaft empfindest, was wäre das?"
+      }
+    },
+    {
+      "id": "q139",
+      "category": 3,
+      "translations": {
+        "en": "What's one challenge you'd like to face head-on in your career, and how do you prepare for it?",
+        "de": "Welche Herausforderung möchtest du in deiner Karriere direkt angehen, und wie bereitest du dich darauf vor?"
+      }
+    },
+    {
+      "id": "q140",
+      "category": 3,
+      "translations": {
+        "en": "What kind of impact do you want your work to have on the world around you?",
+        "de": "Welche Art von Einfluss möchtest du mit deiner Arbeit auf die Welt um dich herum haben?"
+      }
+    },
+    {
+      "id": "q141",
+      "category": 3,
+      "translations": {
+        "en": "If you had the opportunity to meet your future self, what advice would you ask for?",
+        "de": "Wenn du die Gelegenheit hättest, dein zukünftiges Ich zu treffen, welchen Rat würdest du erbitten?"
+      }
+    },
+    {
+      "id": "q142",
+      "category": 3,
+      "translations": {
+        "en": "If you could create a company or organization, what cause would it champion?",
+        "de": "Wenn du ein Unternehmen oder eine Organisation gründen könntest, für welche Sache würde sie eintreten?"
+      }
+    },
+    {
+      "id": "q143",
+      "category": 3,
+      "translations": {
+        "en": "What's something you believe needs more attention in your field, and how do you hope to contribute to it?",
+        "de": "Was glaubst du, braucht in deinem Bereich mehr Aufmerksamkeit, und wie möchtest du dazu beitragen?"
+      }
+    },
+    {
+      "id": "q144",
+      "category": 3,
+      "translations": {
+        "en": "How do you see technology or innovation shaping your future career, and how do you want to be a part of it?",
+        "de": "Wie siehst du Technologie oder Innovation deine zukünftige Karriere prägen, und wie möchtest du Teil davon sein?"
+      }
+    },
+    {
+      "id": "q145",
+      "category": 3,
+      "translations": {
+        "en": "What's a personal or professional milestone you can't wait to hit in the near future?",
+        "de": "Was ist ein persönlicher oder beruflicher Meilenstein, den du in naher Zukunft kaum erwarten kannst?"
+      }
     }
   ]
 }
