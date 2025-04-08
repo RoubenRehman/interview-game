@@ -1,38 +1,46 @@
-# sv
+# Interview Game 🎲💬
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Overview
+An interactive web application designed to facilitate meaningful conversations and self-reflection through thoughtfully curated interview questions. Built with modern web technologies, this app provides an engaging platform for personal exploration and introspection.
 
-## Creating a project
+## Features 🌟
+- **Multilingual Support**: Questions available in English and German
+- **Dynamic Question Categories**:
+  - Get-To-Know
+  - Personal Background
+  - Aspirations
+  - Curiosity
+- **Customizable Timer**: Configurable time limits for each question
+- **Responsive Design**: Works seamlessly across devices
+- **Theme Toggle**: Light and dark mode support
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started 🚀
 
-```bash
-# create a new project in the current directory
-npx sv create
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
 
-# create a new project in my-app
-npx sv create my-app
-```
+### Installation
+1. Clone the repository
+   ```bash
+   git clone https://github.com/RoubenRehman/interview-game.git
+   ```
 
-## Developing
+2. Install dependencies
+   ```bash
+   cd interview-game
+   npm install
+   ```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3. Run the development server
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm run dev
+## Customization 🛠️
+- Add or modify questions in `static/questions/questions.json`
+- Adjust timer settings in the same configuration file
+- Extend language support by adding new translations
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Contributing 🤝
+Contributions are welcome! Please feel free to submit a Pull Request.
