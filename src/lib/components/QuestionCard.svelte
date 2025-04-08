@@ -5,24 +5,28 @@
     export let isTransitioning: boolean;
 
     import { fade } from 'svelte/transition';
+    import { theme } from '$lib/stores/theme';
 </script>
 
 <div class="card-container">
-    <div class="card">
-        {#if !isTransitioning}
-            <div class="question-container">
+    <div class="card" style:background={$theme.colors.card} style:box-shadow={$theme.shadows.card} style:border-radius={$theme.borderRadius.card}>
+        <div class="question-container">
+            {#if !isTransitioning}
                 <p 
                     class="question"
                     transition:fade={{duration: 200}}
+                    style:color={$theme.colors.text}
                 >
                     {question}
                 </p>
-            </div>
-        {/if}
+            {/if}
+        </div>
         <button 
             class="next-button"
             on:click={onNext}
             disabled={isTransitioning}
+            style:background={isTransitioning ? $theme.colors.disabled : $theme.colors.primary}
+            style:border-radius={$theme.borderRadius.button}
         >
             {language === 'en' ? 'Next Question' : 'Nächste Frage'}
         </button>
@@ -41,10 +45,7 @@
     }
 
     .card {
-        background: white;
-        border-radius: 1rem;
         padding: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
         width: 100%;
         height: 300px;
         text-align: center;
@@ -66,7 +67,6 @@
     .question {
         font-size: 1.5rem;
         line-height: 1.6;
-        color: #2d3748;
         margin: 0;
         position: absolute;
         top: 50%;
@@ -83,27 +83,24 @@
         bottom: 2rem;
         left: 50%;
         transform: translateX(-50%);
-        background: #4299e1;
         color: white;
         border: none;
         padding: 0.75rem 1.5rem;
-        border-radius: 0.5rem;
         font-size: 1rem;
         cursor: pointer;
         min-width: 150px;
     }
 
     .next-button:disabled {
-        background: #a0aec0;
         cursor: not-allowed;
     }
 
     .next-button:not(:disabled):hover {
-        background: #3182ce;
+        background: var(--primary-hover) !important;
     }
 
     .next-button:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        box-shadow: var(--button-focus-shadow);
     }
 </style>

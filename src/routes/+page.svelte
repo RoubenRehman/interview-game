@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import QuestionCard from '$lib/components/QuestionCard.svelte';
     import { questionStore, loadQuestions, nextQuestion, setLanguage } from '$lib/stores/questions';
+    import { theme } from '$lib/stores/theme';
 
     let currentQuestion = '';
     let currentLanguage: 'en' | 'de' = 'en';
@@ -21,17 +22,25 @@
     });
 </script>
 
-<main>
+<main style:background={$theme.colors.background}>
     <div class="language-selector">
         <button 
             class:active={currentLanguage === 'en'} 
             on:click={() => setLanguage('en')}
+            style:border-color={$theme.colors.primary}
+            style:color={currentLanguage === 'en' ? $theme.colors.textLight : $theme.colors.primary}
+            style:background={currentLanguage === 'en' ? $theme.colors.primary : 'transparent'}
+            style:border-radius={$theme.borderRadius.button}
         >
             English
         </button>
         <button 
             class:active={currentLanguage === 'de'} 
             on:click={() => setLanguage('de')}
+            style:border-color={$theme.colors.primary}
+            style:color={currentLanguage === 'de' ? $theme.colors.textLight : $theme.colors.primary}
+            style:background={currentLanguage === 'de' ? $theme.colors.primary : 'transparent'}
+            style:border-radius={$theme.borderRadius.button}
         >
             Deutsch
         </button>
@@ -56,7 +65,6 @@
         flex-direction: column;
         align-items: center;
         padding: 1rem;
-        background: #f7fafc;
     }
 
     .card-wrapper {
@@ -75,23 +83,15 @@
     }
 
     .language-selector button {
-        background: transparent;
-        border: 2px solid #4299e1;
-        color: #4299e1;
+        border: 2px solid;
         padding: 0.5rem 1rem;
         margin: 0 0.5rem;
-        border-radius: 0.5rem;
         cursor: pointer;
     }
 
-    .language-selector button.active {
-        background: #4299e1;
-        color: white;
-    }
-
     .language-selector button:hover {
-        background: #3182ce;
-        border-color: #3182ce;
-        color: white;
+        background: var(--primary-hover) !important;
+        border-color: var(--primary-hover) !important;
+        color: white !important;
     }
 </style>
