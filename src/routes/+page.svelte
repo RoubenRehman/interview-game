@@ -1,8 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { questionStore, loadQuestions, nextQuestion, setLanguage } from '$lib/stores/questions';
+    import { questionStore, loadQuestions, nextQuestion } from '$lib/stores/questions';
     import QuestionCard from '$lib/components/QuestionCard.svelte';
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+    import LanguageToggle from '$lib/components/LanguageToggle.svelte';
     import DotBackground from '$lib/components/DotBackground.svelte';
     import { theme } from '$lib/stores/theme';
 
@@ -30,24 +31,11 @@
 <div class="page">
     <DotBackground />
     <main>
-        <ThemeToggle />
-        <div class="language-selector">
-            <button 
-                class:active={currentLanguage === 'en'}
-                on:click={() => setLanguage('en')}
-                style:background={currentLanguage === 'en' ? $theme.colors.primary : 'transparent'}
-                style:color={currentLanguage === 'en' ? 'white' : $theme.colors.text}
-            >
-                English
-            </button>
-            <button 
-                class:active={currentLanguage === 'de'}
-                on:click={() => setLanguage('de')}
-                style:background={currentLanguage === 'de' ? $theme.colors.primary : 'transparent'}
-                style:color={currentLanguage === 'de' ? 'white' : $theme.colors.text}
-            >
-                Deutsch
-            </button>
+        <div class="controls-left">
+            <LanguageToggle />
+        </div>
+        <div class="controls-right">
+            <ThemeToggle />
         </div>
         <div class="content">
             {#if currentQuestion}
@@ -96,27 +84,18 @@
         z-index: 1;
     }
 
-    .language-selector {
+    .controls-left {
         position: fixed;
         top: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 0.5rem;
+        left: 1rem;
         z-index: 10;
     }
 
-    .language-selector button {
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 9999px;
-        cursor: pointer;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .language-selector button:hover {
-        transform: translateY(-1px);
+    .controls-right {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 10;
     }
 
     .content {
@@ -130,6 +109,16 @@
     @media (max-width: 640px) {
         main {
             padding: 1rem;
+        }
+
+        .controls-left {
+            top: 0.5rem;
+            left: 0.5rem;
+        }
+
+        .controls-right {
+            top: 0.5rem;
+            right: 0.5rem;
         }
     }
 </style>
