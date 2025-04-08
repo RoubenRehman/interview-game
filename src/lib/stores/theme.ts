@@ -20,10 +20,10 @@ interface Theme {
 
 const lightTheme: Theme = {
     colors: {
-        background: 'linear-gradient(135deg, #f5f7fa 0%, #e4e8ff 100%)',
-        card: 'linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)',
+        background: '#f0f4f8',
+        card: '#ffffff',
         text: '#2d3748',
-        primary: 'linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)',
+        primary: '#FF4757',  // Vibrant coral red
         disabled: '#CBD5E0'
     },
     shadows: {
@@ -37,10 +37,10 @@ const lightTheme: Theme = {
 
 const darkTheme: Theme = {
     colors: {
-        background: 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)',
-        card: 'linear-gradient(135deg, #2d3748 0%, #4a5568 100%)',
+        background: '#1a1c2a',
+        card: '#2a2d3d',
         text: '#f7fafc',
-        primary: 'linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%)',
+        primary: '#FF4757',  // Same vibrant coral red
         disabled: '#4a5568'
     },
     shadows: {

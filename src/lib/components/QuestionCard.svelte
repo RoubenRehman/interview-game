@@ -13,7 +13,7 @@
 </script>
 
 <div class="card-container">
-    <div class="card" style:background={$theme.colors.card} style:box-shadow={$theme.shadows.card} style:border-radius={$theme.borderRadius.card}>
+    <div class="card" style:background={$theme.colors.card} style:border-radius={$theme.borderRadius.card}>
         <div class="category-label" style:color={$theme.colors.primary}>
             {categoryName}
         </div>
@@ -59,8 +59,11 @@
         text-align: center;
         position: relative;
         transform-style: preserve-3d;
-        transition: transform 0.6s;
-        backdrop-filter: blur(10px);
+        transition: transform 0.6s, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
     }
 
     .category-label {
@@ -74,8 +77,7 @@
         text-transform: uppercase;
         padding: 0.5rem 1rem;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
+        background: rgba(255, 71, 87, 0.1);
     }
 
     .question-container {
@@ -102,7 +104,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .next-button {
@@ -124,15 +125,26 @@
     .next-button:disabled {
         cursor: not-allowed;
         opacity: 0.7;
+        transform: translateX(-50%) !important;
     }
 
     .next-button:not(:disabled):hover {
         transform: translateX(-50%) translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 12px rgba(255, 71, 87, 0.25);
     }
 
     .next-button:focus {
         outline: none;
         box-shadow: var(--button-focus-shadow);
+    }
+
+    @media (max-width: 640px) {
+        .card {
+            padding: 1.5rem;
+        }
+
+        .question {
+            font-size: 1.25rem;
+        }
     }
 </style>
