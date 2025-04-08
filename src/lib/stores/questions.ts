@@ -34,6 +34,7 @@ interface TimerConfig {
 interface QuestionStore {
     currentIndex: number;
     questions: Question[];
+    usedQuestionIds: string[];
     categories: Record<string, Category>;
     languages: Languages;
     timeUpMessages?: TimeUpMessages;
@@ -47,6 +48,7 @@ interface QuestionStore {
 export const questionStore: Writable<QuestionStore> = writable({
     currentIndex: 0,
     questions: [],
+    usedQuestionIds: [],
     categories: {},
     languages: {},
     language: 'en',
@@ -72,6 +74,7 @@ export async function loadQuestions() {
             timeUpMessages: data.timeUpMessages,
             timerConfig: data.timerConfig,
             language: availableLanguages.includes(store.language) ? store.language : defaultLanguage,
+            usedQuestionIds: [],
             showTimer: data.timerConfig?.showTimer ?? false
         }));
     } catch (error) {
@@ -89,18 +92,34 @@ export async function nextQuestion() {
     // Wait for fade out
     await new Promise(resolve => setTimeout(resolve, 200));
 
-    questionStore.update(store => ({
-        ...store,
-        currentIndex: (store.currentIndex + 1) % store.questions.length,
-    }));
+    questionStore.update(store => {
+        // Filter out used questions
+        const availableQuestions = store.questions.filter(
+            q => !store.usedQuestionIds.includes(q.id)
+        );
 
-    // Wait a bit before allowing next transition
-    await new Promise(resolve => setTimeout(resolve, 100));
+        // If all questions have been used, reset used questions
+        if (availableQuestions.length === 0) {
+            return {
+                ...store,
+                usedQuestionIds: [],
+                currentIndex: Math.floor(Math.random() * store.questions.length),
+                isTransitioning: false
+            };
+        }
 
-    questionStore.update(store => ({
-        ...store,
-        isTransitioning: false
-    }));
+        // Select a random question from available questions
+        const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+        const selectedQuestion = availableQuestions[randomIndex];
+        const newCurrentIndex = store.questions.findIndex(q => q.id === selectedQuestion.id);
+
+        return {
+            ...store,
+            currentIndex: newCurrentIndex,
+            usedQuestionIds: [...store.usedQuestionIds, selectedQuestion.id],
+            isTransitioning: false
+        };
+    });
 }
 
 // Function to change language
