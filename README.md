@@ -41,13 +41,7 @@ An interactive web application designed to facilitate meaningful conversations a
 
 ### GitHub Pages
 
-This project is configured for automatic deployment to GitHub Pages:
-
-1. Push changes to the `master` branch
-2. GitHub Actions will automatically build and deploy the site
-3. Access the live site at: https://roubenrehman.github.io/interview-game/
-
-**Note**: Ensure GitHub Pages is enabled in your repository settings under the "Pages" section.
+Access the live site at: https://roubenrehman.github.io/interview-game/
 
 ## Customization 🛠️
 - Add or modify questions in `static/questions/questions.json`
